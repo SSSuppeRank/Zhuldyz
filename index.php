@@ -34,8 +34,19 @@
                 <a class="nav-link" href="pages/imports.php">Imports</a>
                 </li>
             </ul>
-            <a href="scripts/LogIn.php" class="btn btn-outline-success button">Log in</a>
-            <a href="scripts/SignUp.php" class="btn btn-outline-success button">Sign up</a>
+            <!-- <a href="scripts/LogIn.php" class="btn btn-outline-success button">Log in</a>
+            <a href="scripts/SignUp.php" class="btn btn-outline-success button">Sign up</a> -->
+
+            <?php
+                session_start();
+                if( isset( $_SESSION['inSystem'] ) ) {
+                    echo '<a href="operations/LogOut.php" class="btn btn-outline-success button">Log out</a>';
+                }
+                else {
+                    echo '<a href="scripts/LogIn.php" class="btn btn-outline-success button">Log in</a>';
+                    // echo '<a href="scripts/SignUp.php" class="btn btn-outline-success button">Sign up</a>';
+                }
+            ?>
             </div>
         </div>
     </nav>

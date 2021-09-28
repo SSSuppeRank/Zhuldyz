@@ -21,32 +21,22 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="../index.php">Home</a>
+                <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link active" href="reports.php">Reports</a>
+                <a class="nav-link" href="pages/reports.php">Reports</a>
                 </li>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="goods.php">Goods</a>
+                <a class="nav-link" href="pages/goods.php">Goods</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="imports.php">Imports</a>
+                <a class="nav-link" href="pages/imports.php">Imports</a>
                 </li>
             </ul>
-            <!-- <a href="scripts/LogIn.php" class="btn btn-outline-success button">Log in</a>
-            <a href="scripts/SignUp.php" class="btn btn-outline-success button">Sign up</a> -->
-
-            <?php
-                session_start();
-                if( isset( $_SESSION['inSystem'] ) ) {
-                    echo '<a href="../operations/LogOut.php" class="btn btn-outline-success button">Log out</a>';
-                }
-                else {
-                    echo '<a href="../scripts/LogIn.php" class="btn btn-outline-success button">Log in</a>';
-                    // echo '<a href="scripts/SignUp.php" class="btn btn-outline-success button">Sign up</a>';
-                }
-            ?>
+                <!-- <a href="scripts/LogIn.php" class="btn btn-outline-success button">Log in</a> -->
+                <a href="operations/LogOut.php" class="btn btn-outline-success button">Log out</a>
+                <a href="scripts/SignUp.php" class="btn btn-outline-success button">Sign up</a>
             </div>
         </div>
     </nav>
