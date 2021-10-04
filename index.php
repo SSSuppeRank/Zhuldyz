@@ -39,7 +39,11 @@
 
             <?php
                 session_start();
-                if( isset( $_SESSION['inSystem'] ) ) {
+                if( isset( $_SESSION['inSystem'] ) && isset( $_SESSION['admin'] ) ) {
+                    echo '<a href="operations/LogOut.php" class="btn btn-outline-success button">Log out</a>';
+                    echo '<a href="scripts/SignUp.php" class="btn btn-outline-success button">Sign up</a>';
+                }
+                else if( isset( $_SESSION['inSystem'] ) ) {
                     echo '<a href="operations/LogOut.php" class="btn btn-outline-success button">Log out</a>';
                 }
                 else {

@@ -16,21 +16,13 @@
     $count = 0;
 
     while( $row = mysqli_fetch_array( $result ) ) {
-        if( $row["Userlogin"] == $login && $row["Userpassword"] == $password ) {
-            $query2 = "SELECT `Userstatus` FROM `users` WHERE `Userlogin` = '$login'";
-            $result2 = mysqli_query( $link, $query2 )
-                or die( "Error: " . mysqli_error( $link ) );
-
-            if( mysqli_fetch_array( $result2 )['Userstatus'] == "Shop owner" ) {
-                // $_SESSION['admin'] = true;
-                header( 'Location: ../admin.php' );
-            }
-            else {
-                $_SESSION['inSystem'] = true;
-                header( 'Location: ../index.php' );
-            }
-            $count++;
-            break;
+        if( $row["Userlogin"] == $login && $row["Userpassword"] == $password && $row['Userstatus'] == "shop owner") {
+            $_SESSION['admin'] = true;
+            header( 'Location: ../index.php' );
+            $_SESSION['inSystem'] = true;
+        } else if( $row["Userlogin"] == $login && $row["Userpassword"] == $password ) {
+            header( 'Location: ../index.php' );
+            $_SESSION['inSystem'] = true;
         }
     }
 

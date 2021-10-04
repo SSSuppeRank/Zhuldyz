@@ -1,6 +1,6 @@
 <?php
     session_start();
-    unset( $_SESSION['inSystem'] );
+    session_destroy();
 
     header( 'Location: ../index.php' );
 ?>

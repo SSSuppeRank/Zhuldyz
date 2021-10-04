@@ -65,7 +65,7 @@
                     <label for="status" class="form-label">Your status</label>
                     <select name="status" id="status">
                         <option value="shop owner">Shop owner</option>
-                        <option value="shopa ssistant">Shop assistant</option>
+                        <option value="shop assistant">Shop assistant</option>
                     </select>
                 </div>
                 <button type="submit" class="btn btn-outline-success">Submit</button>

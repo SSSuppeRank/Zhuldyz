@@ -37,7 +37,7 @@
             <<?php
                 session_start();
                 if( isset( $_SESSION['inSystem'] ) ) {
-                    echo '<a href="operations/LogOut.php" class="btn btn-outline-success button">Log out</a>';
+                    echo '<a href="../operations/LogOut.php" class="btn btn-outline-success button">Log out</a>';
                 }
                 else {
                     echo '<a href="#" class="btn btn-outline-success button">Log in</a>';
