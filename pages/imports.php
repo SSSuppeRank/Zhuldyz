@@ -55,6 +55,25 @@
         </div>
     </nav>
 
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <form action="../operations/importGoods.php" class="m-4" method="POST">
+                <label for="goodName">Name</label>
+                <input type="text" class="form-control mb-3" placeholder="..." name="goodName">
+
+                <label for="goodQuantity">Quantity</label>
+                <input type="number" class="form-control mb-3" placeholder="..." name="goodQuantity">
+
+                <label for="goodPrice">Price</label>
+                <input type="number" class="form-control mb-3" placeholder="..." name="goodPrice">
+
+                <button class="btn btn-outline-dark">Import</button>
+            </form>
+        </div>
+        <div class="col-3"></div>
+    </div>
+
     <!-- bootstrap javascript link cdn -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>

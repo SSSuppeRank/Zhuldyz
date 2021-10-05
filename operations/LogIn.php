@@ -3,9 +3,6 @@
 
     require_once '../database/connect.php';
 
-    $link = mysqli_connect( $host, $user, $password, $database )
-        or die( "Error: " . mysqli_error( $link ) );
-
     $login = $_POST["login"];
     $password = $_POST["password"];
 
