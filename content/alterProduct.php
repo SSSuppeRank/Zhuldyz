@@ -10,11 +10,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <!-- style css -->
     <link href="../css/style.css" rel="stylesheet">
-    <style>
-        html {
-            overflow-x: hidden;
-        }
-    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -29,14 +24,14 @@
                 <a class="nav-link" aria-current="page" href="../index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="reports.php">Reports</a>
+                <a class="nav-link" href="../pages/reports.php">Reports</a>
                 </li>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="goods.php">Goods</a>
+                <a class="nav-link" href="../pages/goods.php">Goods</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link active" href="imports.php">Imports</a>
+                <a class="nav-link active" href="../pages/imports.php">Imports</a>
                 </li>
             </ul>
             <!-- <a href="scripts/LogIn.php" class="btn btn-outline-success button">Log in</a>
@@ -60,14 +55,7 @@
         </div>
     </nav>
 
-    <div class="row text-center" style="margin-top: 20%;">
-        <div class="col-3"></div>
-        <div class="col-6">
-            <a href="../content/addProduct.php" class="btn btn-outline-dark">import</a>
-            <a href="../content/alterProduct.php" class="btn btn-outline-dark">alter</a>
-        </div>
-        <div class="col-3"></div>
-    </div>
+    <?php require_once('../operations/outputGoodsForImport.php'); ?>
 
     <!-- bootstrap javascript link cdn -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>

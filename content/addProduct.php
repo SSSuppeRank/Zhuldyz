@@ -10,11 +10,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <!-- style css -->
     <link href="../css/style.css" rel="stylesheet">
-    <style>
-        html {
-            overflow-x: hidden;
-        }
-    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -29,14 +24,14 @@
                 <a class="nav-link" aria-current="page" href="../index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="reports.php">Reports</a>
+                <a class="nav-link" href="../pages/reports.php">Reports</a>
                 </li>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="goods.php">Goods</a>
+                <a class="nav-link" href="../pages/goods.php">Goods</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link active" href="imports.php">Imports</a>
+                <a class="nav-link active" href="../pages/imports.php">Imports</a>
                 </li>
             </ul>
             <!-- <a href="scripts/LogIn.php" class="btn btn-outline-success button">Log in</a>
@@ -60,11 +55,21 @@
         </div>
     </nav>
 
-    <div class="row text-center" style="margin-top: 20%;">
+    <div class="row">
         <div class="col-3"></div>
         <div class="col-6">
-            <a href="../content/addProduct.php" class="btn btn-outline-dark">import</a>
-            <a href="../content/alterProduct.php" class="btn btn-outline-dark">alter</a>
+            <form action="../operations/importGoods.php" class="m-4" method="POST">
+                <label for="goodName">Name</label>
+                <input type="text" class="form-control mb-3" placeholder="..." name="goodName">
+
+                <label for="goodQuantity">Quantity</label>
+                <input type="number" class="form-control mb-3" placeholder="..." name="goodQuantity">
+
+                <label for="goodPrice">Price</label>
+                <input type="number" class="form-control mb-3" placeholder="..." name="goodPrice">
+
+                <button class="btn btn-outline-dark">Import</button>
+            </form>
         </div>
         <div class="col-3"></div>
     </div>
