@@ -63,10 +63,10 @@
                 <input type="text" class="form-control mb-3" placeholder="..." name="goodName">
 
                 <label for="goodQuantity">Quantity</label>
-                <input type="number" class="form-control mb-3" placeholder="..." name="goodQuantity">
+                <input type="number" class="form-control mb-3" placeholder="..." name="goodQuantity" min="1">
 
                 <label for="goodPrice">Price</label>
-                <input type="number" class="form-control mb-3" placeholder="..." name="goodPrice">
+                <input type="number" class="form-control mb-3" placeholder="..." name="goodPrice" min="1">
 
                 <button class="btn btn-outline-dark">Import</button>
             </form>

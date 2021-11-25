@@ -10,6 +10,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <!-- style css -->
     <link href="../css/style.css" rel="stylesheet">
+    <?php
+        session_start();
+        if( !isset( $_SESSION['inSystem'] ) ) {   
+            echo "<script>";
+                echo "alert( 'Plz.Log in!' )";
+            echo "</script>";
+            $_SESSION['notInSystem'] = true;
+            header( 'Location: ../index.php' );
+        } else if( !isset( $_SESSION['admin'] ) ) {
+            echo "<script>";
+                echo "alert( 'У вас нет прав на это!' )";
+            echo "</script>";
+            $_SESSION['notAdmin'] = true;
+            header( 'Location: ../index.php' );
+        }
+    ?>
     <style>
         html {
             overflow-x: hidden;
@@ -43,7 +59,6 @@
             <a href="scripts/SignUp.php" class="btn btn-outline-success button">Sign up</a> -->
 
             <?php
-                session_start();
                 if( isset( $_SESSION['inSystem'] ) && isset( $_SESSION['admin'] ) ) {
                     echo '<a href="../operations/LogOut.php" class="btn btn-outline-success button">Log out</a>';
                     echo '<a href="scripts/SignUp.php" class="btn btn-outline-success button">Sign up</a>';
